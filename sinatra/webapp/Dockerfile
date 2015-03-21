@@ -11,7 +11,7 @@ CMD [ "/opt/webapp/bin/webapp" ]
 # cd TheDockerBook/sinatra/webapp/
 # ll Dockerfile
 # docker build -t iliyahoo/webapp:v1 .
-# docker run -d -p 80:4567 --name webapp -h webapp --link redis:db -v $PWD:/opt/webapp -h webapp iliyahoo/webapp:v1
+# docker run -d -p 80:4567 --name webapp --link redis:db -v $PWD:/opt/webapp -h webapp iliyahoo/webapp:v1
 # docker exec -it webapp bash
 
 ## test
