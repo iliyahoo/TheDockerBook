@@ -10,4 +10,5 @@ WORKDIR /data
 ENTRYPOINT [ "jekyll", "build", "--destination=/var/www/html" ]
 
 # docker build -t iliyahoo/jekyll .
-# docker run -v $PWD/james_blog:/data --name jekill -h jekill iliyahoo/jekyll
+# docker run -v $PWD/james_blog:/data --name jekill iliyahoo/jekyll
+# docker run --rm --volumes-from jekill -v $(pwd):/backup ubuntu:14.04 tar cvf /backup/james_blog_backup.tar /var/www/html
